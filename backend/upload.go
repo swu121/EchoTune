@@ -59,25 +59,3 @@ func getS3url(c *gin.Context) {
 
 	c.IndentedJSON(http.StatusOK, urlStr)
 }
-
-// func upload(url string) {
-// 	uploader := s3manager.NewUploader(sess)
-
-// 	f, err := os.Open("../warmupVocal1.wav")
-// 	if err != nil {
-// 		log.Fatalf("failed to open file %q, %v", "../warmupVocal1.wav", err)
-// 	}
-
-// 	// Upload the file to S3.
-// 	_, err = uploader.Upload(&s3manager.UploadInput{
-// 		Bucket: aws.String("echolab"),
-// 		Key:    aws.String(userID + "/warmup"),
-// 		Body:   f,
-// 	})
-
-// 	if err != nil {
-// 		log.Fatalf("failed to upload file, %v", err)
-// 	}
-
-// 	log.Println("file uploaded successfully")
-// }
